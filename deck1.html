@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Outcompeting other bacteria: Live fast or stab hard?</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="lesson.css">
+</head>
+<body>
+
+<div class="sidenav">
+  <a href="welcome.html">Welcome</a>
+  <div class="activenav"><a href="deck1.html">Competition between microbes</a></div>
+  <a href="deck2.html">Poison Tipped Spears?!</a>
+  <a href="deck3.html">Experiment: Tipping Point</a>
+  <a href="About.html">About this activity</a>
+</div>
+
+<div class="content">
+<article>
+   <article-header id="cover" tabindex="-1" style="outline:0;">
+    <h1>Competition between microbes</h1>
+  </article-header>
+
+  <!-- ------------------------------New Section--------------------------- -->
+  <section>
+    <h2>Why compete?</h2>
+    <div class="l100">
+        <p><img class="rimage" src="./images/koli-bacteria-123081_1280.jpg" width=480></img></p>
+        <p>Bacteria, like every organism, need resources, like space to grow. As they spread out, this often also gives them access to food.</p>
+        <p>The problem is that every other bacterial species also needs those things, and space limited, so they have to compete.</p>
+        <p>Imagine an ecosystem that contains two bacterial species. They are identical except for their color, and they have a limited space to grow.</p>
+        <p><strong>Q:</strong> <em>What do you think will happen if they start out with roughly equal populations?</em></p>
+    </div>
+  </section>
+
+   <!-- ------------------------------New Section--------------------------- -->
+  <section id="slide2">
+    <h2>Competing for space</h2>
+    <div class="l100">
+        <p><img class="limage" src="./images/equal_growth.webp" width=512></img></p>
+        <p>One way we can attempt to answer questions like that is by simulating each individual bacteria and observing how the populations change over time.</p>
+        <p>The image here shows the results of a simulation where both bacteria species are exactly the same and start out in roughly equal proportions.</p>
+        <p><strong>Q:</strong> <em>What do you observe?</em></p>
+        <p><strong>Q:</strong> <em>Can you think of a better way to display what's happening?</em></p>
+    <div>
+  </section>
+
+  <!-- ------------------------------New Section--------------------------- -->
+  <section>
+    <h2>Graphing Populations</h2>
+    <div class="l37_5">
+        <p>We can graph the total population of each species across time to get a better idea of what's happening.</p>
+        <p>Here, time is on the X-axis and abundance of each species at that time is on the Y-axis. You can move your mouse over each data point for more information.</p>
+        <p><strong>Q:</strong> <em>What do you see? Are both species growing at similar rates? Are the rates constant?</em></p>
+    </div>
+    <div class="r67_5"> 
+        <p>
+            <canvas id="equal_growth_chart"></canvas>
+            <button onclick='toggle_chart("equal_growth_chart");'>Toggle Chart </button>
+        </p>
+        <div class="bottom-nav">A different way to look at the populations is by their <span class="tooltip"><em>relative</em> abundance<sub style="font-size:70%;">&#x1F50D;</sub><span class="tooltiptext_l">species proportion compared to the total population. Ranges from 0 to 1, all abundances at one time sum up to 1</span></span>. You can click the 'Toggle Chart' button to show the plot using relative abundance. <strong>Q:</strong> <em>Does this make anything easier to see?</em></div>
+    </div>
+  </section>
+
+  <!-- ------------------------------New Section--------------------------- -->
+  <section>
+    <h2>Grow faster!</h2>
+    <div class="l100">
+        <p><img class="limage" src="./images/872355432_6a47e8abda_c.jpg"  width=480></img></p>
+        <p>It looks like in that situation, neither species was going to outcompete the other.</p>
+        <p>One strategy that a lot of bacteria use is to grow faster than others. Sometimes they can only grow faster in specific conditions. Other times, they sacrifice other abilities to grow faster (like antibiotic resistance).</p>
+        <p>Let's imagine the orange bacteria, for whatever reason, grow 50% faster</p>
+        <p><strong>Q:</strong> <em>What do you think will happen?</em> Try to picture, or sketch, the relative and absolute abundance graphs you expect, then go to the next slide.</p>
+    </div>
+  </section>
+
+  <!-- ------------------------------New Section--------------------------- -->
+  <section>
+    <h2>Grow faster - Results!</h2>
+    <div class="r37_5">
+        <img src="./images/grow_faster.webp" width="360"></img>
+    </div>
+    <div class="l67_5"> 
+        <div>
+            <canvas id="uneven_growth_chart"></canvas>
+            <button onclick='toggle_chart("uneven_growth_chart");'>Toggle Chart </button>
+        </div>
+        <p><strong>Q:</strong> <em>Did your predictions match what happened?</em></p>
+        <p><strong>Q:</strong> <em>Does it look like growing faster helped the orange bacteria compete successfully?</em></p>
+    </div>
+  </section>
+
+   <!-- ------------------------------New Section--------------------------- -->
+  <section>
+    <h2>Competition self check</h2>
+    <div class="r37_5">
+        <img src="./images/experiment-chemistry-liquid-scientist-d36a431a68557c1dd8f28e033148b241.jpg" width="360"></img>
+    </div>
+    <div class="l67_5"> 
+        <p>Let's review: (hover your mouse over 'answer' to check yourself)</p>
+        <p class="question"><strong>Q:</strong> What are two things bacteria might compete for? <span class="tooltip">Answer<span class="tooltiptext_r">Space and access to food</span></span></p>
+        <p class="question"><strong>Q:</strong> What's one strategy bacteria might use to compete for those resources? <span class="tooltip">Answer<span class="tooltiptext_r">Growing faster.</span></span></p>
+        <p class="question"><strong>Q:</strong> Are there drawbacks to that strategy? <span class="tooltip">Answer<span class="tooltiptext_r">They might only grow faster in specific situations and they might have to give up other traits to grow faster.</span></span></p>
+        <p class="question"><strong>Q:</strong> What is one way to visualize how an ecosystem community changes over time? <span class="tooltip">Answer<span class="tooltiptext_r">With a population abundance graph.</span></span></p>
+        <p class="question"><strong>Q:</strong> What is the difference between absolute and relative abundance? <span class="tooltip">Answer<span class="tooltiptext_r">Absolute abundance shows total counts. Relative abundance shows ratios.</span></span></p>
+        <p>Please proceed to the <a href="deck2.html">Poison Tipped Spears section</a>.
+    </div>
+  </section>
+
+
+</article>
+</div>
+
+</body>
+<script>
+    document.getElementById("cover").focus();
+</script>
+<script src="./node_modules/chart.js/dist/chart.umd.js"></script>
+<script src="lesson.js"></script>
+
+</html><!DOCTYPE html>
+

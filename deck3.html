@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Outcompeting other bacteria: Live fast or stab hard?</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="lesson.css">
+</head>
+<body>
+
+<div class="sidenav">
+  <a href="welcome.html">Welcome</a>
+  <a href="deck1.html">Competition between microbes</a>
+  <a href="deck2.html">Poison Tipped Spears?!</a>
+  <div class="activenav"><a href="deck3.html">Experiment: Tipping Point</a></div>
+  <a href="About.html">About this activity</a>
+</div>
+
+<div class="content">
+<article>
+  <article-header id="cover" tabindex="-1" style="outline:0;">
+    <h1>Experiment: Tipping Point</h1>
+  </article-header>
+
+   <!-- ------------------------------New Section--------------------------- -->
+  <section>
+    <h2>Finding a tipping point</h2>
+    <div class="l100"> 
+        <p> <img class="rimage" src="./images/tip_rock.png" width="312"></img></p>
+        <p>
+        You might be wondering just how much of a growth disadvantage does it take before the T6SS is not an effective strategy. At least, for this system.
+        </p>
+        <p>
+        That sort of question is an excellent one to answer with some simulation-based experiments.
+        </p>
+        <p>
+        First, let's form a hypothesis. We've already observed that with no growth disadvantage the T6SS dominates but at 60% disadvantage it was ineffective.  So, one very simple hypothesis is that somewhere between 0-60% disadvantage, we'll see a change.
+        </p>
+        <p>
+        That's fine insofar as it goes, but it's also not particularly interesting (testing the hypothesis doesn't tell us anything new). Let me ask you some questions to help you formulate some hypotheses which, when tested, will give you new insights (even if the hypothesis is disproved).
+        </p>
+        <p class="question"><strong>Q:</strong> Imagine running simulations checking between 0-60% growth disadvantages.  Do you think the changeover to 'T6SS is a winning strategy' will come on suddenly or that it might a gradual change?  Why?</p>
+        <p class="question"><strong>Q:</strong> Recall that at a 60% growth disadvantage it took some time for a clear winner to emerge. Do you think that pattern will hold at other growth disadvantages? Why? </p>
+
+        <p>Go ahead to the next page and run some experiments. Make observations related to those questions</p>
+    <div>
+  </section>
+
+  <!-- ------------------------------New Section--------------------------- -->
+  <section>
+    <h2></h2>
+    <div class="l75">
+        <p>
+            <canvas id="growth_experiment_chart"></canvas>
+        </p>
+    </div>
+    <div  class="r25">
+        <p>
+        <form name="myForm">
+           <fieldset >
+               <legend style="font-size: 60%">Run the experiment for a growth disadvantage of:</legend>
+                <input type="radio" id="0pct" name="growth" value="growth_0pct">
+                <label for="0pct">0%</label><br>
+                <input type="radio" id="10pct" name="growth" value="growth_10pct">
+                <label for="10pct">10%</label><br>
+                <input type="radio" id="10pct" name="growth" value="growth_20pct">
+                <label for="20pct">20%</label><br>
+                <input type="radio" id="10pct" name="growth" value="growth_30pct">
+                <label for="30pct">30%</label><br>
+                <input type="radio" id="40pct" name="growth" value="growth_40pct">
+                <label for="40pct">40%</label><br>
+                <input type="radio" id="50pct" name="growth" value="growth_50pct">
+                <label for="50pct">50%</label><br>
+                <input type="radio" id="60pct" name="growth" value="growth_60pct">
+                <label for="60pct">60%</label><br>
+           </fieldset>
+        </form>
+        <p>
+             <button onclick='toggle_chart("growth_experiment_chart");'>Toggle Between Absolute and Relative Abundance</button>
+        </p>
+            
+        </p>
+    </div>  
+     </section>
+
+     <!-- ------------------------------New Section--------------------------- -->
+  <section>
+    <h2>Experiment self check</h2>
+    <div class="r37_5">
+        <img src="./images/pexels-mikhail-nilov-8851375.jpg" width="360"></img>
+    </div>
+    <div class="l67_5"> 
+        <p>Let's check what you saw. (Feel free to use the left arrow key to go back to the experiment page)</p>
+        <p>You can hover over 'answer' to check yourself</p>
+        <p class="question"><strong>Q:</strong> Did the green bacteria start winning bit by bit as the orange bacteria grew more slowly, or was it a sudden jump?<span class="tooltip">Answer<span class="tooltiptext_r">It was a sudden change between 40-60%</span></span></p>
+        <p class="question"><strong>Q:</strong> At 50% and 60% disadvantages, the bacteria gained and lost ground . What type of abundance made this easier to see? <span class="tooltip">Answer<span class="tooltiptext_r">Relative abundance often makes this more clear, your opinion might be different.</span></span></p>
+        <p class="question"><strong>Q:</strong> What other things might you vary in your next experiment? <span class="tooltip">Answer<span class="tooltiptext_r">There's LOTS.</span></span></p>
+        <p> Congratulations! You've finished the activity.</p>
+    </div>
+  </section>
+
+
+
+
+</article>
+</div>
+
+<script>
+    document.getElementById("cover").focus();
+</script>
+<script src="./node_modules/chart.js/dist/chart.umd.js"></script>
+<script src="experiment.js"></script>
+
+
+</body>
+</html><!DOCTYPE html>
+

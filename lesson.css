@@ -1,0 +1,383 @@
+<style>
+
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the side navigation */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+}
+
+
+/* Side navigation links */
+.sidenav a {
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color on hover */
+.sidenav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.activenav {
+    background-color: #6a5acd;
+}
+
+/* Style the content */
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
+}
+/* Border-box all the things */
+* {
+  box-sizing: border-box;
+}
+
+/* Cover the whole screen */
+html,
+body {
+  block-size: 100%;
+}
+
+.limage {
+    float: left;
+    margin-right:20pt;
+    margin-bottom:20pt;
+}
+
+.rimage {
+    float: right;
+    margin-left:20pt;
+    margin-bottom:20pt;
+}
+
+/* This is the slide deck */
+article {
+  /* Cover the screen */
+  block-size: 100%;
+  /* Make it a flex container */
+  display: flex;
+  /* Make it a scroll container */
+  overflow-x: scroll;
+  /* Make inline scrolling snap */
+  scroll-snap-type: x mandatory;
+  /* Use inline axis for scrolling where supported */
+  @supports (overflow-inline: scroll) {
+    overflow-inline: scroll;
+    scroll-snap-type: inline mandatory;
+  }
+  /* Set up a slide counter */
+  counter-reset: slide;
+
+}
+
+/* These are the slides */
+article > * {
+  /* Fill the scroll container */
+  flex: 0 0 100%;
+  /* Scroll to the start of the slide */
+  scroll-snap-align: start;
+  /* Increment the slide counter */
+  counter-increment: slide;
+}
+
+/* This is the counter */
+article > ::before {
+  /* Display the counter */
+  content: counter(slide);
+}
+
+/* This is a cover layout for the first slide */
+article > :first-child {
+  display: grid;
+  text-align: center;
+  padding-inline: 4rem;
+  font-size: clamp(1rem, 1rem + 2vw, 3rem);
+  line-height: 1.3;
+}
+
+/******************************************************
+ Presentational styles (not required for the technique) 
+ ******************************************************/
+
+:root {
+  --foreground: #000;
+  --background: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #fff;
+    --background: #000;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: Avenir Next, system-ui;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+article {
+  scrollbar-color: var(--foreground) transparent;
+  scrollbar-width: thin;
+}
+
+/* Make each slide a grid layout */
+article > * {
+  position: relative;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+  row-gap: 1rem;
+  padding: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+/* Style the slide counter */
+article > ::before {
+  position: absolute;
+  inset-block-start: 1rem;
+  inset-inline-end: 1rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  font-variant: tabular-nums;
+  line-height: 1;
+  background-color: var(--foreground);
+  color: var(--background);
+  clip-path: circle();
+}
+
+/* Remove margin for slide content */
+article > * > * {
+  margin: 0;
+}
+
+/* For all none cover layouts set the heading size */
+article > * + * > :first-child {
+  font-size: 2em;
+  grid-column: 1 / span 8;
+}
+
+/* For the cover layout set the measure */
+article > :first-child > :first-child {
+  max-inline-size: 21ch;
+  grid-column: 1 / span 8;
+}
+
+.c75{
+    grid-column: 2 / span 6;
+    grid-row: 2;
+    word-wrap: break-word;
+}
+
+.l12_5 {
+    grid-column: 1 / span 1;
+    grid-row: 2;
+    word-wrap: break-word;
+}
+
+.l25 {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    word-wrap: break-word;
+}
+
+.l37_5 {
+    grid-column: 1 / span 3;
+    grid-row: 2;
+    word-wrap: break-word;
+}
+
+
+.l50 {
+    grid-column: 1 / span 4;
+    grid-row: 2;
+    word-wrap: break-word;
+}
+
+.l67_5 {
+    grid-column: 1 / span 5;
+    grid-row: 2;
+    word-wrap: break-word;
+}
+.l75 {
+    grid-column: 1 / span 6;
+    grid-row: 2;
+    word-wrap: break-word;
+}
+
+.l87_5 {
+    grid-column: 1 / span 7;
+    grid-row: 2;
+    word-wrap: break-word;
+}
+
+.l100 {
+    grid-column: 1 / span 8;
+    grid-row: 2;
+    word-wrap: break-word;
+}
+
+.r12_5 {
+    grid-column: 8 / span 1;
+    grid-row: 2;
+    word-wrap: break-word;
+}
+
+.r25 {
+    grid-column: 7 / span 2;
+    grid-row: 2;
+    word-wrap: break-word;
+}
+
+.r37_5 {
+    grid-column: 6 / span 3;
+    grid-row: 2;
+    word-wrap: break-word;
+}
+
+.r50 {
+    grid-column: 5 / span 4;
+    grid-row: 2;
+    word-wrap: break-word;
+}
+
+.r67_5 {
+    grid-column: 4 / span 5;
+    grid-row: 2;
+    word-wrap: break-word;
+}
+
+.r75 {
+    grid-column: 3 / span 6;
+    grid-row: 2;
+    word-wrap: break-word;
+}
+
+.r87_5 {
+    grid-column: 2 / span 7;
+    grid-row: 2;
+    word-wrap: break-word;
+}
+.bottom-nav {
+    grid-column: 2 / span 6;
+    grid-row: 3;
+    word-wrap: break-word;
+    font-size:80%;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    font-style: normal;
+}
+
+
+.tooltip .tooltiptext_l {
+    visibility: hidden;
+    background-color: tan;
+    color: black;
+    width: 400px;
+    text-align: left;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    right: 105%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border color: black;
+
+}
+
+.tooltip:hover .tooltiptext_l {
+    visibility: visible;
+}
+
+.tooltip .tooltiptext_r {
+    visibility: hidden;
+    background-color: tan;
+    color: black;
+    width: 400px;
+    text-align: left;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    left: 105%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border color: black;
+
+}
+
+.tooltip:hover .tooltiptext_r {
+    visibility: visible;
+}
+
+.tooltip .tooltiptext_c {
+    visibility: hidden;
+    background-color: tan;
+    color: black;
+    width: 400px;
+    text-align: left;
+    padding: 5px 0;
+    border-radius: 6px;
+    z-index: 1;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border color: black;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    max-width: 90vw;
+    
+}
+
+.tooltip:hover .tooltiptext_c {
+    visibility: visible;
+}
+
+
+.img_caption {
+    font-size: 80%
+}
+
+.question {
+    font-style: italic;
+}
+</style>
+
+

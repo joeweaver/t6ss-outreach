@@ -1,0 +1,151 @@
+<!doctype HTMl>
+<html lang="en">
+<head>
+<title>Outcompeting other bacteria: Live fast or stab hard?</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="lesson.css">
+</head>
+<body>
+
+<div class="sidenav">
+  <a href="welcome.html">Welcome</a>
+  <a href="deck1.html">Competition between microbes</a>
+  <div class="activenav"><a href="deck2.html">Poison Tipped Spears?!</a></div>
+  <a href="deck3.html">Experiment: Tipping Point</a>
+  <a href="About.html">About this activity</a>
+</div>
+
+<div class="content">
+<article>
+  <article-header id="cover" tabindex="-1" style="outline:0;">
+    <h1>Poison Tipped Spears?!</h1>
+  </article-header>
+
+  <!-- ------------------------------New Section--------------------------- -->
+  <section>
+    <h2>There's more than one way to compete</h2>
+    <div class="l100">
+        <p><img class="rimage" src="./images/5524057_885662ad_1024x1024.jpg"  width=480></img></p>
+        <p>
+        Instead of growing faster, why not just stab your competitors? Even better, why not stab them with something covered in poison?
+        </p>
+        <p> 
+        Believe it or not, this is exactly what some bacteria do, using something called the Type VI Secretion System (or T6SS for short). 
+        They grow reusable nano-harpoons which they use to poison any other bacteria that are nearby.
+        </p>
+        <p>
+        <em><strong>Q:</strong> Do you think this is an effective strategy?</em></p>
+        <p>Let's run a simulation where both species grow the same but one has a T6SS and see what happens.
+        </p>
+    </div>
+  </section>
+
+   <!-- ------------------------------New Section--------------------------- -->
+  <section>
+    <h2>The best offense is a good... offense?</h2>
+    <div class="l100">
+        <p><img class="limage" src="./images/t6ss_no_tradeoff.webp" width=768></img></p>
+        <p>It looks like having a T6SS is a winning strategy in this situation.</p>
+        <p class="question"><strong>Q:</strong> What do you think the population graph looks like for this situation?</p>
+        <p>Go to the next slide to find out.</p>
+    </div>
+  </section>
+
+  <!-- ------------------------------New Section--------------------------- -->
+  <section>
+    <h2>Quantifying the attack</h2>
+    <div class="r50">
+        <p class="question"><strong>Q:</strong> About how long did it take for their to be four times as many orange bacteria as green? <span class="tooltip">Answer<span class="tooltiptext_l">Between four and five hours</span></span></p>
+        <p class="question"><strong>Q:</strong> When did the green bacteria fall to about 10% of the population? <span class="tooltip">Answer<span class="tooltiptext_l">Around 6 hours (easier to see in relative abundance graph)</span></span></p>
+        <p class="question"><strong>Q:</strong> Can you think of any times where this 'poison tipped spear' strategy would be a bad idea? <span class="tooltip">Answer<span class="tooltiptext_l">There's lots of possibilities. We'll talk about one in the next slide.</span></span></p>
+    </div>
+    <div class="l50"> 
+        <p>
+            <canvas id="t6ss_equals_chart"></canvas>
+            <button onclick='toggle_chart("t6ss_equals_chart");'>Toggle Chart </button>
+        </p>
+    </div>
+ </section>
+
+
+   <!-- ------------------------------New Section--------------------------- -->
+  <section>
+    <h2>There ain't no such thing as a free lunch (TANSTAAFL)</h2>
+    <div class="l100">
+        <p><img class="rimage" src="./images/mousetrap.png" width=380></img></p>
+        <p>
+        One reason that a T6SS strategy won't always work has to do with a recurring theme in ecology: adaptations often have costs, so there's a trade-off. The previous simulation didn't make the 'stabbers' pay any cost.</p>
+        <p> 
+        In reality, the T6SS system takes energy (maybe a whole lot of energy) to maintain. That energy would otherwise go to growth, so the trade-off is 'be able to kill competitors, but grow slower.'
+        </p>
+        <p class="question"><strong>Q:</strong> What do you think would happen if having a T6SS harpoon meant growing 60% slower?</p>
+        <p>
+        Let's see what happens when we simulate that.
+        </p>
+    </div>
+  </section>
+
+  <!-- ------------------------------New Section--------------------------- -->
+  <section>
+    <h2>Paying the trade-off: Simulation view</h2>
+    <div class="l100">
+        <p><img class="limage" src="./images/t6ss_70.webp" width=512></img></p>
+        <p>The T6SS doesn't seem to be a winning strategy if it costs too much.</p>
+        <p class="question"><strong>Q:</strong> What, specifically, about growing faster is allowing the green bacteria to survive? <span class="tooltip">Hint<span class="tooltiptext_l">Remember the T6SS uses tiny 'spears', so it only works when cells are close to each other.</span></span></p>
+        <p class="question"><strong>Q:</strong> Do you think the population graph will show anything interesting? If so, what?</p>
+        <p><span class="tooltip">Curious about the 'floating' green bacteria near the end?<sub style="font-size:70%;">&#x1F50D;</sub><span class="tooltiptext_r">The simulation edges wrap around, so the 'floating' bit is actually part of the large green 'tower' which grew across the boundary. </span></span></p>
+
+    </div>
+  </section>
+
+
+  <!-- ------------------------------New Section--------------------------- -->
+  <section>
+    <h2>Paying the trade-off: Population graph</h2>
+    <div class="r50">
+        <p class="question"><strong>Q:</strong> Do you notice anything interesting about which species was winning over time? <span class="tooltip">Answer<span class="tooltiptext_l">It seemed to go back and forth between orange and green bacteria.</span></span></p>
+        <p class="question"><strong>Q:</strong> How long did it take for a clear winner to emerge? <span class="tooltip">Answer<span class="tooltiptext_l">Green became permanently dominant at about 15 hours.</span></span></p>
+         <p class="question"><strong>Q:</strong> When did the losing bacteria reach a plateau in absolute abundance?  <span class="tooltip">Answer<span class="tooltiptext_l">Orange hit at around 11-12 hours.</span></span></p>
+        <p class="question"><strong>Q:</strong> If orange hit a plateau at hour 11, then why did its relative abundance continue to drop? <span class="tooltip">Answer<span class="tooltiptext_l">Relative abundance depends on the total number of bacteria. Since green kept growing, the relative abundance went down.</span></span></p>
+    </div>
+    <div class="l50"> 
+        <p>
+            <canvas id="t6ss_40pct_chart"></canvas>
+            <button onclick='toggle_chart("t6ss_40pct_chart");'>Toggle Chart </button>
+        </p>
+    </div>
+ </section>
+
+   <!-- ------------------------------New Section--------------------------- -->
+  <section>
+    <h2>T6SS self check</h2>
+    <div class="r37_5">
+        <img src="./images/pexels-kindelmedia-8325947.jpg" width="360"></img>
+    </div>
+    <div class="l67_5"> 
+        <p>Let's review: (hover your mouse over 'answer' to check yourself)</p>
+        <p class="question"><strong>Q:</strong>  Apart from growing fast, what's another way bacteria can compete?<span class="tooltip">Answer<span class="tooltiptext_r">Directly attacking, such as with a poison-tipped 'spear'</span></span></p>
+        <p class="question"><strong>Q:</strong> Why isn't it realistic to think a competition strategy is always effective? <span class="tooltip">Answer<span class="tooltiptext_r">Most strategies involve a trade-off, which is a common theme in ecology</span></span></p>
+        <p class="question"><strong>Q:</strong> Why isn't stabbing and poisoning the competition always effective? <span class="tooltip">Answer<span class="tooltiptext_r">It requires growing slower, and competitors might be able to grow to outside of stabbing distance.</span></span></p>
+        <p class="question"><strong>Q:</strong> Why isn't just growing fast the answer then? <span class="tooltip">Answer<span class="tooltiptext_r">Growing fast has its own trade-offs</span></span></p>
+        <p class="question"><strong>Q:</strong> Is the winner of a competition always immediately apparent? <span class="tooltip">Answer<span class="tooltiptext_r">No, sometimes the dominant species changes over time.</span></span></p>
+        <p>Please proceed to the <a href="deck3.html">Experiment: Tipping Point</a> section.
+    </div>
+  </section>
+
+
+
+</article>
+</div>
+
+<script>
+    document.getElementById("cover").focus();
+</script>
+<script src="./node_modules/chart.js/dist/chart.umd.js"></script>
+<script src="lesson.js"></script>
+
+
+</body>
+</html><!DOCTYPE html>
+
